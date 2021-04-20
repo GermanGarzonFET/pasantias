@@ -7,7 +7,6 @@ export const createRoles = async() => {
 
         if (contador > 0) return;
         const values = await Promise.all([
-            new RolesSchema({ name: 'user' }).save(),
             new RolesSchema({ name: 'moderator' }).save(),
             new RolesSchema({ name: 'admin' }).save(),
         ]);
